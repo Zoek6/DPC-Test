@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+DCS playbook - Capabilities and standards
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/playbook/index",
+        text: "Introduction"
+      }
+    ],
+    href: "#",
+    text: "Managing our roadmap"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        DCS Playbook
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          How do we manage the roadmap?
+        </span>
+      </h1>
+
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/playbook/index",
+            text: "Introduction"
+          },
+          {
+            href: "/playbook/page-2",
+            text: "Our process"
+          },
+          {
+            href: "/playbook/page-3",
+            text: "What is a catalogue agreement?"
+          },
+          {
+            href: "/playbook/page-4",
+            text: "What are capabilities and standards?"
+          },
+          {
+            href: "/playbook/page-5",
+            text: "How does assurance and onboarding work?"
+          },
+          {
+            href: "/playbook/page-6",
+            text: "Managing our roadmap",
+            current: "true"
+          }
+        ]
+      }) }}
+
+      <p>We have a wide ranging set of powers under the Catalogue Agreement to both construct a Standards Roadmap which obliges suppliers 
+        to deliver changes to their software at our request.  This is not an unconstrained right and there is a governance and consultation 
+        process which operates alongside Roadmap development.
+      </p>
+
+       <p>The current operating model assumes that Roadmaps are managed at the level of a domain. This means that there are multiple Roadmaps 
+        being managed and applied by the Catalogue. At present we are able to manage any overlap in relation to shared Standards and Capabilities, 
+        however as more and larger additional domains come into scope it will be necessary to design a multi-domain internal governance procedure in 
+        order to manage broader systems priorities.  The structures and processes described below reflect the practices of the Primary Care domain.  
+        Adult Social Care has not yet formalised its Roadmap governance structures.</p>  
+
+        <p>We manage the Roadmap broadly according to a few themes, around which each domain places key governance structures. These are as follows;</p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+         <li>Standards elaboration and authoring</li>
+         <li>Supplier and market engagement</li>
+         <li>Prioritisation and Roadmap publication</li>
+        </ul>
+        
+       <p>Standards elaboration and authoring represents the translation of a system level requirement into an technical implementation either involving updates to, 
+        or the creation of new, Standards.</p>
+        
+      <p>All new work requests into the DCS come in via the Front Door which conducts an initial triage and routing of the request, depending on its nature. Where 
+      the request is thought to involve a change or addition to Standards on the Roadmap then it is passed to a second triage team who have technical and analysis 
+      discovery capability sufficient to assess these and establish an optimum implementation strategy.</p>
+
+      <p>Different domains may be set up differently to operate with the market during this discovery phase, current GP IT Futures Framework includes the additional 
+        ‘Lot 2’ contract which enables the programme to contract directly with Suppliers for consultancy and technical services in order to demonstrate viability and 
+        approach. 
+      </p>
+
+      <p>Once an approach for the work has been agreed the domain Roadmap publication managers are able to publish a Draft version of whatever change is intended on the 
+        Roadmap.  It is important to note that this need not be a specification or anything detailed - it merely needs to describe the intended change in high level terms; 
+        but this publication bookmarks a spot on the Roadmap, begins the supplier consultation period and starts the clock on the minimum notification for Standards on the 
+        Roadmap (the minimum notification for Standards marks the minimum time from publication of Draft on the Roadmap to the time to its Effective Date and is 1 months 
+        for a Patch Change, 3 months for a Minor Change and 15 months for a Major Change or new Standard).</p>
+
+        <p>Standards owners are responsible for the ongoing elaboration and development of the Standard, where they may or may not require support from a BA team operating 
+          at domain level who manage the content and coverage of the Capability and Standards model for their domain of interest.  This team, working to the Requirements Catalogue 
+          Team (who operate as product owners and Design Authority for the Catalogue Capability and Standards library), own and develop the content as required for a domain.  How 
+          each domain commissions and structures its own BA capability is a decision for the domain itself, however GP IT Futures supports a permanent which supports Primary Care 
+          and from which is drawn the Catalogue level Product team (at the moment this operates as one team, but these distinct needs will need to logically separate as the Catalogue 
+          grows in terms of domains adopted).</p>
+
+        <p>Supplier and Market Engagement is undertaken with the market through the Market Governance Group which, operating to a standard Terms of Reference, advertises each new Roadmap change, 
+          signposts to the Roadmap pages containing the Draft Standard / change, conducts technical and business discussions in relation to commercial and technical plans and confirms the position 
+          and status of each item on the Roadmap.  The Market Governance Group is multi domain, however it contains within the operating protocols the ability to branch into multiple groups, 
+          either by domain or by specific service interest (e.g. IM1). Draft Standards are live and available for comment / review from the point that they first are placed on the Roadmap as Draft, 
+          until they achieve Published status.</p>
+
+        <P>The Roadmap runs to a broad consent based model (we have powers to mandate Standards through the Roadmap but only where we act reasonably and abide by the constraints set out within the 
+          Ancillary Schedule Change Management and the Roadmap) which means that the Market Governance Group is not only where individual Standards are consulted, but where the overall Standards burden 
+          associated with each domain level Roadmap.  This element of consultation generally impacts the placement of Effective Dates, which drive the development timeline where a supplier is operating 
+          at or near capacity, and creates a feedback loop into the Roadmap managers.</P>
+
+        <p>Prioritisation and Roadmap publication takes this feedback as an input where supplier development capacity is the rate limiting factor in the pace at which Standards can be deployed into the market.  
+          Each domain currently has a different set of characteristics insofar as Standards burden vs. development capacity, and indeed different classes of system within a domain are differently burdened 
+          (View the section on Frameworks to see how they can reflect these issues in their commercial terms). Prioritisation happens at domain level and each domain supports its own governance 
+          (Primary Care has a New Work Requests Board) which prioritises items as they move through the process.  Each domain also maintains a Roadmap Manager who is responsible for the maintenance and publication of 
+          the Roadmap and all associated items and reflects the discussions / agreements reached between the various stakeholders throughout the process.</p>
+
+
+
+      {{ pagination({
+        "previousUrl": "/playbook/page-5",
+        "previousPage": "Assurance and onboarding"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

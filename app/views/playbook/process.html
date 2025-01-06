@@ -1,19 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  DCS playbook - Our process
+  The process
 {% endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
     items: [
       {
-        href: "/playbook/index",
-        text: "Introduction"
+        href: "playbook",
+        text: "Home"
       }
     ],
-    href: "#",
-    text: "Our process"
+    href: "playbook",
+    text: "Main page"
   }) }}
 {% endblock %}
 
@@ -22,9 +22,9 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        DCS Catalogue Playbook
+        DCS Playbook
         <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-          Our process
+          The process
         </span>
       </h1>
 
@@ -32,34 +32,23 @@
       {{ contentsList({
         items: [
           {
-            href: "/playbook/index",
-            text: "Introduction"
+            href: "playbook",
+            text: "Main page",
           },
           {
-            href: "/playbook/page-2",
-            text: "Our process",
+            href: "process",
+            text: "The process"
             current: "true"
           },
           {
             href: "/playbook/page-3",
-            text: "What is a catalogue agreement?"
-          },
-          {
-            href: "/playbook/page-4",
-            text: "What are capabilities and standards?"
-          },
-          {
-            href: "/playbook/page-5",
-            text: "How does assurance and onboarding work?"
-          },
-          {
-            href: "/playbook/page-6",
-            text: "Managing our roadmap"
+            text: "Page three"
           }
         ]
       }) }}
-      <h3>Procurement contact</h3>
-      <p>The DCS Catalogue or device is a Condition Precedent, placed in a procurement contract (either FW or Call Off / base contract) requiring the Supplier to be a signatory to the 
+
+      <p>Catalogue agreement</p>
+      <p>The device is a Condition Precedent, placed in a procurement contract (either FW or Call Off / base contract) requiring the Supplier to be a signatory to the 
         Catalogue Agreement and Compliant under its terms, and the Catalogue Agreement itself.</p>
       <p>The Catalogue Agreement is an evergreen relational contract, there are no paid transactions occurring within it. The terms are therefore applied to all 
         signatories, continuously, without any requirement for payment from any party; which includes the placement, application and assurance of Standards development 
@@ -84,12 +73,11 @@
         integrated with the NHS Digital Finance department and supports central invoicing.</P>
 
 
-
       {{ pagination({
-        "previousUrl": "/playbook/index",
-        "previousPage": "Introduction",
+        "previousUrl": "/playbook",
+        "previousPage": "Main page",
         "nextUrl": "/playbook/page-3",
-        "nextPage": "Catalogue agreement"
+        "nextPage": "Page two"
       }) }}
 
     </div>

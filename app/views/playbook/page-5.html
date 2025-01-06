@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+DCS playbook - Capabilities and standards
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/playbook/index",
+        text: "Introduction"
+      }
+    ],
+    href: "#",
+    text: "Assurance and onboarding"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        DCS Playbook
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          How does assurance and onboarding work?
+        </span>
+      </h1>
+
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/playbook/index",
+            text: "Introduction"
+          },
+          {
+            href: "/playbook/page-2",
+            text: "Our process"
+          },
+          {
+            href: "/playbook/page-3",
+            text: "What is a catalogue agreement?"
+          },
+          {
+            href: "/playbook/page-4",
+            text: "What are capabilities and standards?"
+          },
+          {
+            href: "/playbook/page-5",
+            text: "How does assurance and onboarding work?",
+            current: "true"
+          },
+          {
+            href: "/playbook/page-6",
+            text: "Managing our roadmap"
+          }
+        ]
+      }) }}
+
+      <p>OnBoarding is the process whereby we receive Catalogue Solutions into compliance for the first time (thereafter further assurance is either as needed or as 
+        regularly scheduled within the Standard).</p>
+
+        <h3>Onboarding</h3>
+
+       <p>The process for OnBoarding is as set out in an Ancillary document to the Catalogue Agreement; it consists of 4 Steps;</p>  
+
+       <ol class="nhsuk-list nhsuk-list--number">
+        <li>Catalogue Agreement execution and Catalogue Solution registration, signing the agreement and registering your product (Capabilities and User Stories proposed)
+        </li>
+        <li>Capability Assessment, this is the process of establishing which Capabilities and User Stories the Solution meets.</li>
+        <li>Standards Assurance, this is the process of establishing compliance with each of the Standards linked to the User Stories mapped. Each Standard has its own 
+          compliance regime with the whole flow controlled by process and tooling within the Catalogue OnBoarding team.</li>
+        <li>Catalogue Listing Creation, this is the process of reviewing the information created through the OnBoarding process and creating the master data sheet for that 
+          Catalogue Solution</li>
+      </ol>
+        
+       <p>OnBoarding activity maps to the nature of Standards, therefore there is a block of overarching product Standards which typically require supplier submission of 
+        information and supporting documentation which is then reviewed and interrogated by an subject matter expert (SME), there are national services for which evidence 
+        of connection suffices, there are technical testers to test interoperability services and there are data and information specialists who check the implementation of
+         Data Standards (such as the Core Information Standard or SNOMED).</p>
+        
+      <p>We have internal teams who are able to conduct assurance on behalf of the Catalogue, and we also engage external parties to conduct assurance on our behalf via a 
+        delegation right under the Agreement.</p>
+
+      <p>Where external parties are engaged we audit their assurance processes and can contract with them to provide assurance services under specified conditions.</p>
+
+      <h3>Delegated parties</h3>
+      <p>Delegated parties may be;</p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>Interop Standards owners outside NHS Digital (see SCI Gateway Standard)</li>
+          <li>they may be recognised Standards assessor bodies such as ISO accreditors (where these are incorporated into Standards)</li>
+          <li>they may be parties who we have contracted with in order to provide us with scaled resource. </li>
+        </ul>
+
+        <p>Ensuring adequate support and access to assuring parties during the OnBoarding process is key to supporting a good supplier experience and maximising adherence to
+           Catalogue Agreement requirements.</p>
+      
+     
+           <h3>Useful guidance</h3>
+           <ul class="nhsuk-list nhsuk-list--bullet">
+             <li><a href="https://nhse-dsic.atlassian.net/wiki/spaces/GGD/pages/11738382415/Supplier+Guidance+for+Capability+Assessments">Supplier guidance for capability assessments</a></li>
+           </ul>
+
+      {{ pagination({
+        "previousUrl": "/playbook/page-4",
+        "previousPage": "Capabilities and standards",
+        "nextUrl": "/playbook/page-6",
+        "nextPage": "Managing our roadmap"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
